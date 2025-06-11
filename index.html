@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nossa História de Amor 💖</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="hearts-container"></div>
+  
+  <div class="main-card" id="carta">
+    <h1>💌 Uma Carta Para o Amor da Minha Vida 💌</h1>
+    <div id="mensagem" class="mensagem"></div>
+    <button onclick="escreverMensagem()">Ler Carta</button>
+    <button onclick="mostrarGaleria()" id="verFotosBtn" style="display: none;">Ver Nossas Fotos 📸</button>
+    <button onclick="fecharTudo()" id="fimBtn" style="display: none;">Fim 💕</button>
+  </div>
+
+  <div class="galeria" id="galeria" style="display: none;">
+    <h2>📸 Nossos Momentos Juntos</h2>
+    <div class="carousel">
+      <img src="img/foto1.jpg" class="carousel-image" alt="Foto do casal 1">
+      <img src="img/foto2.jpg" class="carousel-image" alt="Foto do casal 2">
+      <img src="img/foto3.jpg" class="carousel-image" alt="Foto do casal 3">
+    </div>
+  </div>
+
+  <audio autoplay loop>
+    <source src="audio.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

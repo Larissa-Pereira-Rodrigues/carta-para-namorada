@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #ffe6f0, #ffd1dc);
+  font-family: 'Georgia', serif;
+  overflow-x: hidden;
+  text-align: center;
+}
+
+.main-card {
+  padding: 40px;
+  max-width: 800px;
+  margin: 80px auto;
+  background-color: #fff0f5;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  transition: all 1s ease;
+}
+
+h1, h2 {
+  color: #d63384;
+}
+
+button {
+  padding: 12px 30px;
+  margin: 15px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 8px;
+  background-color: #d63384;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #a61e65;
+}
+
+.mensagem {
+  font-size: 1.2em;
+  white-space: pre-wrap;
+  margin-top: 25px;
+  color: #333;
+  text-align: left;
+}
+
+.hearts-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.heart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  transform: rotate(45deg);
+  animation: fall linear infinite;
+  z-index: 0;
+}
+
+.heart::before,
+.heart::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -10px;
+  left: 0;
+}
+
+.heart::after {
+  left: -10px;
+  top: 0;
+}
+
+@keyframes fall {
+  0% { transform: translateY(-10%) rotate(45deg); opacity: 1; }
+  100% { transform: translateY(110vh) rotate(45deg); opacity: 0; }
+}
+
+.galeria {
+  margin-top: 50px;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.carousel-image {
+  width: 250px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.carousel-image:hover {
+  transform: scale(1.05);
+}
